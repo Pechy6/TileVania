@@ -17874,6 +17874,54 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1652640249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4523740771738206206, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
+  m_PrefabInstance: {fileID: 2093322324188722094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652640256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652640249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: a1db3e40a6c454d40afd76b2780af801, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1652640257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652640249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb3aa623447849e599b173f523cc320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 5
 --- !u!1 &1952098928
 GameObject:
   m_ObjectHideFlags: 0
@@ -18226,6 +18274,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6821786988383010847, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7048860721021730413, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.11
@@ -18269,7 +18321,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4523740771738206206, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1652640256}
+    - targetCorrespondingSourceObject: {fileID: 4523740771738206206, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1652640257}
   m_SourcePrefab: {fileID: 100100000, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
