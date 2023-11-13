@@ -15,10 +15,12 @@ public class PlayerMovement : MonoBehaviour
 
     Animator myAnimator;
 
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        LayerMask.GetMask("Player","Ground");
     }
 
 
@@ -28,12 +30,11 @@ public class PlayerMovement : MonoBehaviour
         FlipSprite();
     }
 
-        void OnMove(InputValue value)
+    void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
     }
-    
+
     void OnJump(InputValue value)
     {
         if(value.isPressed)
