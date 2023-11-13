@@ -38,8 +38,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(myPlayer.IsTouchingLayers(LayerMask.GetMask("Ladder")))
         {
-            Vector2 climbingLeader = new Vector2(moveInput.x*runSpeed, moveInput.y * climbingSpeed);
-            myRigidbody.velocity = climbingLeader;
+            Vector2 climbingLadder = new Vector2(moveInput.x*runSpeed, moveInput.y * climbingSpeed);
+            myRigidbody.velocity = climbingLadder;
         }
     }
     void OnMove(InputValue value)
