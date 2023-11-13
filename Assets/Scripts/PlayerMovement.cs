@@ -7,14 +7,16 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 1f;
-    [SerializeField] float jumpSpeed = 5f;
-    [SerializeField] float leaderSpeed = 1f;
+    [SerializeField] float jumpSpeed = 1f;
+    [SerializeField] float climbingSpeed = 1f;
 
     Rigidbody2D myRigidbody;
     Vector2 moveInput;
 
     Animator myAnimator;
     CapsuleCollider2D myPlayer;
+
+
 
 
     void Start()
@@ -29,8 +31,17 @@ public class PlayerMovement : MonoBehaviour
     {
         Run();
         FlipSprite();
+        ClimbLadder();
     }
 
+    void ClimbLadder()
+    {
+        if(myPlayer.IsTouchingLayers(LayerMask.GetMask("Ladder")))
+        {
+            Vector2 climbingLeader = new Vector2(moveInput.x*runSpeed, moveInput.y * climbingSpeed);
+            myRigidbody.velocity = climbingLeader;
+        }
+    }
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -53,16 +64,14 @@ public class PlayerMovement : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
         myRigidbody.velocity = playerVelocity;
 
-        if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon) 
+        if (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon)
         {
             myAnimator.SetBool("isRunning", true);
         }
         else
         {
             myAnimator.SetBool("isRunning", false);
-        }
-        
-        
+        }  
     }
 
     void FlipSprite()
