@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpSpeed = 1f;
     [SerializeField] float climbingSpeed = 1f;
 
+    float gravityScaleAtStart;
+
     Rigidbody2D myRigidbody;
     Vector2 moveInput;
 
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myPlayer = GetComponent<CapsuleCollider2D>();
+        gravityScaleAtStart = myRigidbody.gravityScale;
     }
 
 
@@ -36,11 +39,18 @@ public class PlayerMovement : MonoBehaviour
 
     void ClimbLadder()
     {
-        if(myPlayer.IsTouchingLayers(LayerMask.GetMask("Ladder")))
+        if(!myPlayer.IsTouchingLayers(LayerMask.GetMask("Ladder")))
         {
+            myRigidbody.gravityScale = gravityScaleAtStart;
+            myAnimator.SetBool("isClimbing", false);
+            return;
+        }
             Vector2 climbingLadder = new Vector2(moveInput.x*runSpeed, moveInput.y * climbingSpeed);
             myRigidbody.velocity = climbingLadder;
-        }
+            myRigidbody.gravityScale = 0f;
+
+                bool playerHasVerticalSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
+                myAnimator.SetBool("isClimbing", playerHasVerticalSpeed);
     }
     void OnMove(InputValue value)
     {
