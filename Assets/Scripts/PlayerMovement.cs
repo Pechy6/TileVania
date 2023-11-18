@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 1f;
     [SerializeField] float jumpSpeed = 1f;
     [SerializeField] float climbingSpeed = 1f;
+    [SerializeField] Vector2 getJumpyAfterDeath = new Vector2(20, 20);
 
     float gravityScaleAtStart;
 
@@ -104,8 +105,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
         {
-            Debug.Log("You are dead");
             isAlive = false;
+            myAnimator.SetTrigger("Dying");
+            myRigidbody.velocity = getJumpyAfterDeath;
         }
     }
 

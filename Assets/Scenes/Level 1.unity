@@ -408,7 +408,7 @@ Transform:
   m_GameObject: {fileID: 104483207}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6480002, y: -0.305, z: -10}
+  m_LocalPosition: {x: -1.5039997, y: 1.708, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -870,7 +870,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.653168, y: 1.1136215, z: -10}
+  m_LocalPosition: {x: -1.504, y: 1.5400002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -988,7 +988,7 @@ TilemapRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -7010,7 +7010,7 @@ Transform:
   m_GameObject: {fileID: 746317540}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.648, y: -0.47299975, z: -10}
+  m_LocalPosition: {x: -1.504, y: 1.5400002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7204,7 +7204,7 @@ Transform:
   m_GameObject: {fileID: 991029715}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.648, y: -0.47299975, z: -10}
+  m_LocalPosition: {x: -1.504, y: 1.5400002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7343,7 +7343,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -28298,7 +28298,7 @@ TilemapRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -28559,6 +28559,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2061551655195804150, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
+      propertyPath: getJumpyAfterDeath.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4523740771738206206, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -28573,11 +28577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7048860721021730413, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.648
+      value: -1.504
       objectReference: {fileID: 0}
     - target: {fileID: 7048860721021730413, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.473
+      value: 1.54
       objectReference: {fileID: 0}
     - target: {fileID: 7048860721021730413, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
       propertyPath: m_LocalPosition.z
