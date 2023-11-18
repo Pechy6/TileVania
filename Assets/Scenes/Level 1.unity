@@ -28560,6 +28560,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2061551655195804150, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
+      propertyPath: getJumpyAfterDeath.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061551655195804150, guid: 3f9fed85dd1c74061beefc338f4a93a6, type: 3}
       propertyPath: getJumpyAfterDeath.y
       value: 100
       objectReference: {fileID: 0}
