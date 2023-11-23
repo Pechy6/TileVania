@@ -83,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
             myRigidbody.velocity += new Vector2(0f, jumpSpeed);
         }
     }
-
     void Run()
     {
         Vector2 playerVelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
